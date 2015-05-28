@@ -1,0 +1,107 @@
+<div class ="container">
+    <div class="col-lg-1">
+
+    </div>
+
+    <div class="col-lg-11">
+        <h3> Cliente</h3>
+        <div class ="table-responsive">
+            <table class="table table-striped table-bordered table-hover table-condensed">
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo cliente</th>
+                    <th>Cidade</th>
+                    <th>Nome Empresa</th>
+                    <th>Endereco</th>
+                    <th>Bairro</th>
+                     <th>Cpf</th>
+                     <th>Celular</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>ASkype</th>
+                    <th>Ações</th>
+                </tr>
+
+                <?php foreach($this->data as $entity): ?>
+                    <tr>
+                        <td><?php echo $entity->getNomeCliente(); ?></td>
+                        <td><?php echo $entity->getTipoPessoa(); ?></td>
+                        <td><?php echo $entity->getCidade(); ?></td>
+                        <td><?php echo $entity->getNomeEmpresa(); ?></td>
+                        <td><?php echo $entity->getEndereco(); ?></td>
+                        <td><?php echo $entity->getBairro(); ?></td>
+                        <td><?php echo $entity->getCpf(); ?></td>
+                        <td><?php echo $entity->getCelular(); ?></td>
+                        <td><?php echo $entity->getTelefone(); ?></td>
+                        <td><?php echo $entity->getEmail(); ?></td>
+                        <td><?php echo $entity->getSkype(); ?></td>
+
+
+                        <td>
+                            <a href="<?php echo $this->url('pc_helpAdmin-interna',
+                                array('controller'=>'clientes','action'=>'edit','id'=>$entity->getCodCli())); ?>">Editar</a>
+                            <a href="<?php echo $this->url('pc_helpAdmin-interna',
+                                array('controller'=>'clientes','action'=>'delete','id'=>$entity->getCodCli())); ?>">Deletar</a>
+                            <a href="<?php echo $this->url('pc_helpAdmin-interna',
+                                array('controller'=>'maquina','action'=>'new','id'=>$entity->getCodCli())); ?>">Casdastrar Máquina</a>
+
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </table>
+
+                <h3> Máquina</h3>
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr>
+                        <th>Codigo Maquina</th>
+                       <th>Tipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Cor</th>
+                        <th>Processador</th>
+                        <th>Tela</th>
+                        <th>Grafico</th>
+                        <th>Ram</th>
+                        <th>Hd</th>
+                        <th>Obs</th>
+                        <th>Ações</th>
+
+                    </tr>
+
+                    <?php foreach($entity->getMaquina() as $maquina): ?>
+                        <tr>
+                            <td><?php echo $maquina->getCodMaq(); ?></td>
+                            <td><?php echo $maquina->getTipo(); ?></td>
+                            <td><?php echo $maquina->getMarca(); ?></td>
+                            <td><?php echo $maquina->getModelo(); ?></td>
+                            <td><?php echo $maquina->getCor(); ?></td>
+                            <td><?php echo $maquina->getProcessador(); ?></td>
+                            <td><?php echo $maquina->getTela(); ?></td>
+                            <td><?php echo $maquina->getGrafico(); ?></td>
+                            <td><?php echo $maquina->getRam(); ?></td>
+                            <td><?php echo $maquina->getHd(); ?></td>
+                            <td><?php echo $maquina->getObs(); ?></td>
+
+                            <td>
+
+                                <a href="<?php echo $this->url('pc_helpAdmin-interna',
+                                    array('controller'=>'problema','action'=>'new','id'=>$maquina->getCodMaq())); ?>">Abir Ordem de Serviço</a>
+
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+
+                </table>
+
+            </div> <!-- final table -->
+
+    </div> <!-- final coll-lg-->
+</div> <!--final container-->
+
+</hr>
+
+
+
+
+

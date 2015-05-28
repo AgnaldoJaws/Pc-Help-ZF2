@@ -1,0 +1,24 @@
+
+<div class="container">
+
+    <div class="col-lg-2">
+
+
+    </div>
+
+    <div class="col-lg-10">
+        <?php
+        $form = $this->form;
+
+        $form->setAttribute('action', $this->url('pc_helpAdmin',array('controller'=>'problema','action'=>'new')));
+
+        $form->prepare();
+
+        echo $this->form($form,null); ?>
+
+
+    </div>
+
+
+</div> <!-- final container -->
+

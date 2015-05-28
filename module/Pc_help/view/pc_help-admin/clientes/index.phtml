@@ -1,0 +1,58 @@
+
+<h3> Cliente</h3>
+
+<div class="container">
+
+    <div class="col-lg-4">
+
+
+         <?php
+        $form = $this->form;
+        $form->setAttribute('action', $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'search')));
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        echo $this->formRow($form->get('cpf'));
+        echo $this->formSubmit($form->get('submit'));
+
+        echo $this->form()->closeTag();
+        ?>
+
+
+        <p>
+            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Cadastar Cliente</a>
+        </p>
+
+        <p>
+            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'problema','action'=>'list')); ?>">Ordens de serviço abertas</a>
+        </p>
+        <p>
+            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'problema','action'=>'list')); ?>">Problemas Solucionados</a>
+        </p>
+
+        <p>
+            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Controle Financeiro</a>
+        </p>
+
+        <p>
+            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Controle de estoque</a>
+        </p>
+        <p>
+            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Orçamento</a>
+        </p>
+
+    </div>
+
+
+        <div class="col-lg-8">
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
