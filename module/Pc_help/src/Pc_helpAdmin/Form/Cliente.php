@@ -2,16 +2,19 @@
 
 namespace Pc_helpAdmin\Form;
 
-use Zend\Form\Form;
+use Doctrine\ORM\EntityManager;
+use Zend\Form\Form,
+    Zend\Form\Element\Select;
 
 
 class Cliente extends Form {
 
+    protected $tipoPessoa;
 	public function __construct($name = null) {
 		parent::__construct('cliente');
-			
-		$this->setAttribute('method', 'post');
-		$this->setInputFilter(new ClienteFilter);
+
+
+        $this->setAttribute('method', 'post');
 
 		$this->add(array(
 				'name' => 'id',
@@ -21,34 +24,36 @@ class Cliente extends Form {
 				)
 		));
 
-        $this->add(array(
-            'name' => 'tipoPessoa',
-            'options' => array(
-                'type' => 'text',
-                'label' => 'Tipo Pessoa'
-            ),
-            'attributes' => array(
-                'id' => 'tipoPessoa',
-                'placeholder' => 'Tipo Pessoa'
-            ),
+
+
+        $tipoPessoa = new Select();
+        $tipoPessoa->setLabel("Tipo Pessoa")
+            ->setName("tipoPessoa")
+            ->setOptions(array(
+                'value_options'=>array(
+                    '1' => 'Selecio o tipo de Pessoa',
+                    'FISICA' => 'Fisica',
+                    'JURIDICA' => 'Juridica'
+                ),
+
+            ));
+        $this->add($tipoPessoa);
 
 
 
+        $cidade = new Select();
+        $cidade->setLabel("Cidade")
+            ->setName("cidade")
+            ->setOptions(array(
+                'value_options'=>array(
+                    '1' => 'Selecio a cidade',
+                    'cananeia' => 'Cananeia',
+                    'registro' => 'Registro',
+                    'juquia'=>'Juquia'
+                ),
 
-
-    ));
-
-        $this->add(array(
-            'name' => 'cidade',
-            'options' => array(
-                'type' => 'text',
-                'label' => 'cidade'
-            ),
-            'attributes' => array(
-                'id' => 'cidade',
-                'placeholder' => 'Cidade'
-            )
-        ));
+            ));
+        $this->add($cidade);
 
         $this->add(array(
             'name' => 'nome_empresa',
@@ -175,11 +180,11 @@ class Cliente extends Form {
             'name' => 'cpf',
             'options' => array(
                 'type' => 'text',
-                'label' => 'cpf'
+                'label' => ''
             ),
             'attributes' => array(
                 'id' => 'cpf',
-                'placeholder' => 'Cpf'
+                'placeholder' => 'Pesquisar Cliente Por Nome'
             )
         ));
 
@@ -262,8 +267,8 @@ class Cliente extends Form {
         $this->add(array(
             'name' => 'submit',
             'type' => 'submit',
-            'attributes' => array('type' => 'submit', 'class' => 'btn-cucces'),
-            'options' => array('label' => 'Enviar')
+            'attributes' => array('type' => 'submit', 'class' => 'btn btn-success'),
+            'options' => array('label' => 'Ok')
         ));
 
 

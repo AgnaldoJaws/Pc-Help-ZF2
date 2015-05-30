@@ -35,6 +35,20 @@ class Problema  {
 
     }
 
+    public function update (array $data){
+        //find
+        // da set automaticamnete
+        $entity = $this->em->getReference('Pc_help\Entity\Problema', $data['id']);
+        $entity = Configurator::configure($entity, $data);
+
+
+        $this->em->persist($entity);
+        $this->em->flush();
+
+        return $entity;
+    }
+
+
 
 
 

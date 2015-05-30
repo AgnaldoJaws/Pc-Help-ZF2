@@ -39,7 +39,7 @@ class ClientesController extends AbstractActionController
     }
 	
 	public function indexAction() {
-	
+
 		$form = new FrmCliente();
 
 	
@@ -68,7 +68,7 @@ class ClientesController extends AbstractActionController
 		return new ViewModel(array('form' => $form));
 	}
 	
-      public function editAction() {
+     public function editAction() {
         $form = new FrmCliente();
         $request = $this->getRequest();
 
@@ -78,7 +78,7 @@ class ClientesController extends AbstractActionController
         if ($this->params()->fromRoute('id', 0))
             $form->setData($entity->toArray());
 
-        if ($request->isPost()) {
+       if ($request->isPost()) {
             $form->setData($request->getPost());
             if ($form->isValid()) {
                 $service = $this->getServiceLocator()->get('Pc_help\Service\Cliente');

@@ -25,9 +25,12 @@
                         <td><?php echo $entity->getStatus(); ?></td>
                         <td><?php echo $entity->getProblem(); ?></td>
                         <td><?php echo $entity->getObs(); ?></td>
+                        <td><?php echo $entity->getObs(); ?></td>
                         <td>
                             <a href="<?php echo $this->url('pc_helpAdmin-interna',
                                 array('controller'=>'solucao','action'=>'new','id'=>$entity->getCodOs())); ?>">Solucionar</a>
+                            <a href="<?php echo $this->url('pc_helpAdmin-interna',
+                                array('controller'=>'problema','action'=>'edit','id'=>$entity->getCodOs())); ?>">Atualizar</a>
                         </td>
 
                     </tr>

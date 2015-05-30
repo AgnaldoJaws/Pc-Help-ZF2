@@ -2,11 +2,12 @@
 
 namespace Pc_helpAdmin\Form;
 
-use Zend\Form\Form;
+
 use Zend\Form\Element;
 use Zend\Form\Element\Textarea;
 
-
+use Zend\Form\Form,
+    Zend\Form\Element\Select;
 class Problem extends Form {
 
     public function __construct($name = null) {
@@ -30,17 +31,19 @@ class Problem extends Form {
 
         ));
 
-        $this->add(array(
-            'name' => 'status',
-            'options' => array(
-                'type' => 'text',
-                'label' => 'status'
-            ),
-            'attributes' => array(
-                'id' => 'status',
-            ),
+        $status= new Select();
+        $status->setLabel("Status")
+            ->setName("status")
+            ->setOptions(array(
+                'value_options'=>array(
+                    '3' => 'Selecio o status',
+                    '1' => 'Aberto',
+                    '2' => 'Fechado'
+                ),
 
-        ));
+            ));
+        $this->add($status);
+
 
 
         $this->add(array(

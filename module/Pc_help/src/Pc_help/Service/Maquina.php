@@ -35,7 +35,10 @@ class Maquina  {
         return $maquina;
     }
 
+  public  function update (){
 
+
+  }
 
 
 

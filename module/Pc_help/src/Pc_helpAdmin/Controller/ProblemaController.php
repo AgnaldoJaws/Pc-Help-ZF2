@@ -61,6 +61,29 @@ class ProblemaController extends AbstractActionController
         return new ViewModel(array('form'=>$form));
         }
 
+    public function editAction() {
+        $form = new FrmProblema();
+        $request = $this->getRequest();
+
+        $repository = $this->getEm()->getRepository('Pc_help\Entity\Problema');
+        $entity = $repository->find($this->params()->fromRoute('id', 0));
+
+        if ($this->params()->fromRoute('id', 0))
+            $form->setData($entity->toArray());
+
+        if ($request->isPost()) {
+            $form->setData($request->getPost());
+            if ($form->isValid()) {
+                $service = $this->getServiceLocator()->get('Pc_help\Service\Problema');
+                $service->update($request->getPost()->toArray());
+
+                return $this->redirect()->toRoute('pc_helpAdmin',array('controller'=>'clientes'));
+            }
+        }
+
+        return new ViewModel(array('form' => $form));
+    }
+
 	/*
 	 * @return EntityManager
 	 */

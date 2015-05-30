@@ -1,7 +1,8 @@
 <?php
-namespace Pc_help\Service;
+/*namespace Pc_help\Service;
 
-use  Doctrine\ORM\EntityManager;
+use
+    Doctrine\ORM\EntityManager;
 
 use Pc_help\Entity\Configurator;
 
@@ -14,7 +15,7 @@ use Pc_help\Entity\Configurator;
   	 * @var EntityManager
   	 */
   	
-  	protected $em;
+  /*	protected $em;
   	protected $entity;
   	
   	public function __construct(EntityManager $em){

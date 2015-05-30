@@ -18,6 +18,7 @@ use Pc_help\Service\Solucao as ServiceSolucao;
 
 
 
+
 class Module
 
 
@@ -67,11 +68,11 @@ class Module
 
 		},
 				 
-		'Pc_help\Service\Cliente'=>function($service){
-		 
-		return new ServicoCliente($service->get('Doctrine\ORM\EntityManager'));
-		 
-		},
+                    'Pc_help\Service\Cliente'=>function($service){
+
+                    return new ServicoCliente($service->get('Doctrine\ORM\EntityManager'));
+
+                    },
                     'Pc_help\Service\Maquina'=>function($service){
 
                         return new ServiceMaquina($service->get('Doctrine\ORM\EntityManager'));
@@ -88,6 +89,7 @@ class Module
                         return new ServiceSolucao($service->get('Doctrine\ORM\EntityManager'));
 
                     },
+
 
 		 
 		 

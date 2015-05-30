@@ -1,56 +1,64 @@
 
-<h3> Cliente</h3>
-
-<div class="container">
-
-    <div class="col-lg-4">
 
 
-         <?php
-        $form = $this->form;
-        $form->setAttribute('action', $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'search')));
-        $form->prepare();
-        echo $this->form()->openTag($form);
-        echo $this->formRow($form->get('cpf'));
-        echo $this->formSubmit($form->get('submit'));
-
-        echo $this->form()->closeTag();
-        ?>
+<div class="container class"container-fluid">
+        <div class="row">
+            <div class="col-md-3">
 
 
-        <p>
-            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Cadastar Cliente</a>
-        </p>
-
-        <p>
-            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'problema','action'=>'list')); ?>">Ordens de serviço abertas</a>
-        </p>
-        <p>
-            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'problema','action'=>'list')); ?>">Problemas Solucionados</a>
-        </p>
-
-        <p>
-            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Controle Financeiro</a>
-        </p>
-
-        <p>
-            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Controle de estoque</a>
-        </p>
-        <p>
-            <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>">Orçamento</a>
-        </p>
-
-    </div>
+                <?php
+                $form = $this->form;
+                $form->setAttribute('action', $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'search')));
+                $form->prepare();
+                echo $this->form()->openTag($form);
+                echo $this->formRow($form->get('cpf'));
+                echo $this->formSubmit($form->get('submit'))."<br /> <br />";
+                echo $this->form()->closeTag();
+                ?>
+                
+                <div class="btn-group btn-group-vertical">
+                    <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>" class="btn btn-success" role="button">Cadastar Cliente</a></br></br>
 
 
-        <div class="col-lg-8">
 
+                    <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'Clientes','action'=>'new')); ?>" class="btn btn-success" role="button">Problemas Solucionados    </a></br></br>
+                    <a href="#" class="btn btn-success" role="button">Controle Financeiro       </a></br></br>
+                    <a href="#" class="btn btn-success" role="button">Controle de estoque</a></br></br>
+                    <a href="#" class="btn btn-success" role="button">Orçamento</a></br></br>
+                    <a href="<?php echo $this->url('pc_helpAdmin',array('controller'=>'problema','action'=>'list')); ?>" class="btn btn-success" role="button">Controle de Problemas</a></br></br>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-9">
+                <div class="jumbotron">
+                    <h1> Pc Help ZendFrameWork2</h1>
+                    <h2> Sistema de ordens de serviço para lojas de manutenção de computadores</h2>
+                </div>
 
         </div>
 
 
 
-    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

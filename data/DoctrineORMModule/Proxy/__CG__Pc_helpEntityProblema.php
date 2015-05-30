@@ -286,6 +286,28 @@ class Problema extends \Pc_help\Entity\Problema implements \Doctrine\ORM\Proxy\P
     /**
      * {@inheritDoc}
      */
+    public function getSolucao()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSolucao', array());
+
+        return parent::getSolucao();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSolucao($solucao)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSolucao', array($solucao));
+
+        return parent::setSolucao($solucao);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function toArray()
     {
 

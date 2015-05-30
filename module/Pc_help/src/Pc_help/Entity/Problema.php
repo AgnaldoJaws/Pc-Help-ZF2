@@ -38,6 +38,9 @@ class Problema {
     protected $maquina;
 
 
+
+
+
     /**
      * @ORM\OneToMany(targetEntity="Pc_help\Entity\Solucao",mappedBy="problema")
      */
@@ -146,6 +149,22 @@ class Problema {
         $this->obs = $obs;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getSolucao()
+    {
+        return $this->solucao;
+    }
+
+    /**
+     * @param mixed $solucao
+     */
+    public function setSolucao($solucao)
+    {
+        $this->solucao = $solucao;
+    }
+
 
 
 
@@ -156,7 +175,8 @@ class Problema {
             'maquina' => $this->getMaquina(),
             'status' => $this->getStatus(),
             'problema'=>$this->getProblem(),
-            'obs'=>$this->getObs()
+            'obs'=>$this->getObs(),
+            'solucao'=>$this->getSolucao()
 
         );
     }

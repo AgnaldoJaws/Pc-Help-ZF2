@@ -37,7 +37,18 @@ return array('router' => array(
 				),
 		),
 ),
+'service_manager'=>array(
+        'services'=>array(
 
+            'tipoPessoa'=>array(
+                '1' => 'Física',
+                '2' => 'Juridica',
+
+            ),
+        )
+
+
+),
 
 		'controllers' => array(
 				'invokables' => array(
@@ -48,6 +59,8 @@ return array('router' => array(
                     'solucao'=>'Pc_helpAdmin\Controller\SolucaoController'
 				),
 		),
+
+
 
 		'view_manager' => array(
 				'display_not_found_reason' => true,

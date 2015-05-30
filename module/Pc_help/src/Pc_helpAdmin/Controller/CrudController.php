@@ -1,11 +1,12 @@
 <?php
 
 
-namespace Pc_helpAdmin\Controller;
+/*namespace Pc_helpAdmin\Controller;
 
 
 
-use Zend\Form\Form;
+use
+    Zend\Form\Form;
 
 use Pc_help\Entity\Cidade;
 use Pc_help\Entity\TipoPessoa;
@@ -23,7 +24,7 @@ abstract class CrudController extends AbstractActionController
 	/*
 	 * EntityManager
 	*/
-	protected $em;
+/*	protected $em;
 	protected $service;
 	protected $entity;
 	protected $form;
@@ -60,9 +61,9 @@ abstract class CrudController extends AbstractActionController
 		$em->persist($cliente);
 		$em->flush();*/
 			
-		$cliente = $repo->findAll();
+	/*	$cliente = $repo->findAll();
 		/*$tipoPessoa = $repoTipoPessoa->findAll();*/
-		return new ViewModel(array('cliente'=>$cliente));
+		/*return new ViewModel(array('cliente'=>$cliente));
 
 
 	}
@@ -128,7 +129,7 @@ abstract class CrudController extends AbstractActionController
 	 * @return EntityManager
 	*/
 
-	protected function getEm() {
+	/*protected function getEm() {
 		if (null === $this->em)
 			$this->em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
 

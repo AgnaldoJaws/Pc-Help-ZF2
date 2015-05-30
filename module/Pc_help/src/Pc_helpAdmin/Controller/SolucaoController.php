@@ -32,10 +32,11 @@ class SolucaoController extends AbstractActionController
         if ($this->params()->fromRoute('id', 0))
             $form->setData($entity->toArray());
 
-       if ($request->isPost()){
-            $form->setData($request->getPost());
+       if ($request->isPost()) {
+           $form->setData($request->getPost());
 
-            if ($form->isValid()){
+
+           if ($form->isValid()){
                 $service = $this->getServiceLocator()->get('Pc_help\Service\Solucao');
                 $service->insert($request->getPost()->toArray());
                 return $this->redirect()->toRoute('pc_helpAdmin', array('controller' => 'clientes' ));
@@ -48,6 +49,7 @@ class SolucaoController extends AbstractActionController
 
         return new ViewModel(array('form'=>$form));
 }
+
 
 
 

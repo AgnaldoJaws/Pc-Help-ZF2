@@ -39,7 +39,7 @@
 
                         <td>
                             <a href="<?php echo $this->url('pc_helpAdmin-interna',
-                                array('controller'=>'clientes','action'=>'edit','id'=>$entity->getCodCli())); ?>">Editar</a>
+                                array('controller'=>'clientes','action'=>'edit','id'=>$entity->getCodCli())); ?>">Edita</a>
                             <a href="<?php echo $this->url('pc_helpAdmin-interna',
                                 array('controller'=>'clientes','action'=>'delete','id'=>$entity->getCodCli())); ?>">Deletar</a>
                             <a href="<?php echo $this->url('pc_helpAdmin-interna',
@@ -70,6 +70,7 @@
                     </tr>
 
                     <?php foreach($entity->getMaquina() as $maquina): ?>
+
                         <tr>
                             <td><?php echo $maquina->getCodMaq(); ?></td>
                             <td><?php echo $maquina->getTipo(); ?></td>
@@ -94,7 +95,16 @@
 
                 </table>
 
-            </div> <!-- final table -->
+
+
+
+
+
+
+
+
+
+        </div> <!-- final table -->
 
     </div> <!-- final coll-lg-->
 </div> <!--final container-->
