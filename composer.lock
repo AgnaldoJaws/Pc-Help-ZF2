@@ -1,11 +1,54 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "56fae834afa77e192a392ebf3f0d50d5",
+    "hash": "8d1723b6988fe16fdce9fca2b50fc72c",
     "packages": [
+        {
+            "name": "dino/dompdf-module",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raykolbe/DOMPDFModule.git",
+                "reference": "ebb367877e25a39e597b529abd25f5390422253b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raykolbe/DOMPDFModule/zipball/ebb367877e25a39e597b529abd25f5390422253b",
+                "reference": "ebb367877e25a39e597b529abd25f5390422253b",
+                "shasum": ""
+            },
+            "require": {
+                "dompdf/dompdf": "0.6.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "DOMPDFModule": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raymond Kolbe",
+                    "email": "raymond.kolbe@maine.edu"
+                }
+            ],
+            "description": "A Zend Framework 2 module for incorporating DOMPDF support.",
+            "homepage": "http://raymondkolbe.com",
+            "keywords": [
+                "dompdf",
+                "pdf",
+                "zf2"
+            ],
+            "time": "2014-04-18 00:18:45"
+        },
         {
             "name": "doctrine/annotations",
             "version": "dev-master",
@@ -212,16 +255,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "dev-master",
+            "version": "2.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "ff72726b0876638fa7db2f28b0f26e3f1f6656ca"
+                "reference": "26727ba78de21a824dcbfa5a8ab52c21fe7d71d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/ff72726b0876638fa7db2f28b0f26e3f1f6656ca",
-                "reference": "ff72726b0876638fa7db2f28b0f26e3f1f6656ca",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/26727ba78de21a824dcbfa5a8ab52c21fe7d71d5",
+                "reference": "26727ba78de21a824dcbfa5a8ab52c21fe7d71d5",
                 "shasum": ""
             },
             "require": {
@@ -238,7 +281,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6.x-dev"
+                    "dev-master": "2.5.x-dev"
                 }
             },
             "autoload": {
@@ -281,7 +324,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-05-13 13:35:24"
+            "time": "2015-04-15 22:02:48"
         },
         {
             "name": "doctrine/dbal",
@@ -447,7 +490,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/43919318d15792829a7bc2dffa0554f441e37f56",
+                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/bde0b1bd7660ec9bd349b86e7762dca420aed243",
                 "reference": "43919318d15792829a7bc2dffa0554f441e37f56",
                 "shasum": ""
             },
@@ -768,6 +811,47 @@
             "time": "2015-05-07 12:36:20"
         },
         {
+            "name": "dompdf/dompdf",
+            "version": "v0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/dompdf.git",
+                "reference": "cf7d8a0a27270418850cc7d7ea532159e5eeb3eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/cf7d8a0a27270418850cc7d7ea532159e5eeb3eb",
+                "reference": "cf7d8a0a27270418850cc7d7ea532159e5eeb3eb",
+                "shasum": ""
+            },
+            "require": {
+                "phenx/php-font-lib": "0.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "include/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                },
+                {
+                    "name": "Brian Sweeney",
+                    "email": "eclecticgeek@gmail.com"
+                }
+            ],
+            "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
+            "homepage": "https://github.com/dompdf/dompdf",
+            "time": "2014-03-11 01:59:52"
+        },
+        {
             "name": "neilime/zf2-twb-bundle",
             "version": "2.4.0",
             "source": {
@@ -837,6 +921,40 @@
                 "zend framework 2"
             ],
             "time": "2015-04-01 12:54:52"
+        },
+        {
+            "name": "phenx/php-font-lib",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-font-lib.git",
+                "reference": "c30c7fc00a6b0d863e9bb4c5d5dd015298b2dc82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/c30c7fc00a6b0d863e9bb4c5d5dd015298b2dc82",
+                "reference": "c30c7fc00a6b0d863e9bb4c5d5dd015298b2dc82",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "classes/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse, export and make subsets of different types of font files.",
+            "homepage": "https://github.com/PhenX/php-font-lib",
+            "time": "2014-02-01 15:22:28"
         },
         {
             "name": "symfony/console",
@@ -1014,17 +1132,59 @@
             "time": "2015-05-11 16:03:51"
         },
         {
+            "name": "zendframework/zendpdf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/ZendPdf.git",
+                "reference": "1a4d31a4be9d526a38a5512ec985df65c6ce4c98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/ZendPdf/zipball/1a4d31a4be9d526a38a5512ec985df65c6ce4c98",
+                "reference": "1a4d31a4be9d526a38a5512ec985df65c6ce4c98",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-memory": ">=2.0.0",
+                "zendframework/zend-stdlib": ">=2.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ZendPdf\\": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Pdf Component",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "pdf",
+                "zf2"
+            ],
+            "time": "2014-10-23 19:13:39"
+        },
+        {
             "name": "zendframework/zendxml",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/ZendXml.git",
-                "reference": "1c8d4b424824d605b203a33729bbb3a3f7c4616b"
+                "reference": "3dcfc87ccd6378360d987d7f467a086c5d598c2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZendXml/zipball/1c8d4b424824d605b203a33729bbb3a3f7c4616b",
-                "reference": "1c8d4b424824d605b203a33729bbb3a3f7c4616b",
+                "url": "https://api.github.com/repos/zendframework/ZendXml/zipball/3dcfc87ccd6378360d987d7f467a086c5d598c2c",
+                "reference": "3dcfc87ccd6378360d987d7f467a086c5d598c2c",
                 "shasum": ""
             },
             "require": {
@@ -1056,7 +1216,7 @@
                 "xml",
                 "zf2"
             ],
-            "time": "2014-11-22 20:27:31"
+            "time": "2015-05-22 19:35:35"
         }
     ],
     "packages-dev": [],
@@ -1064,7 +1224,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "doctrine/doctrine-orm-module": 20,
-        "neilime/zf2-twb-bundle": 0
+        "neilime/zf2-twb-bundle": 0,
+        "zendframework/zendpdf": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

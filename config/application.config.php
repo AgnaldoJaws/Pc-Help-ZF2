@@ -4,8 +4,9 @@ return array(
     'modules' => array(
     		'DoctrineModule',
     		'DoctrineORMModule',
-        'TwbBundle',
-        'Pc_help'
+	        'TwbBundle',
+	        'DOMPDFModule',
+	        'Pc_help'
     ),
 
     // These are various options for the listeners attached to the ModuleManager

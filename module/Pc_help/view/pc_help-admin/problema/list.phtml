@@ -1,39 +1,59 @@
-<div class ="container">
-    <div class="col-lg-1">
+<div class="container">
+	<div class="col-lg-1"></div>
 
-    </div>
-
-    <div class="col-lg-11">
-        <h3> Problemas abertos</h3>
-        <div class ="table-responsive">
-            <table class="table table-striped table-bordered table-hover table-condensed">
-                <tr>
-
-
-                    <th>Status</th>
-                    <th>Problema</th>
-                    <th>Obs</th>
-                    <th>Maquina</th>
-                    <th>Ações</th>
-
-                </tr>
+	<div class="col-lg-11">
+		<h3>Problemas abertos</h3>
+		<div class="table-responsive">
+			<table
+				class="table table-striped table-bordered table-hover table-condensed">
+				<tr>
 
 
+					<th>Status</th>
+					<th>Problema</th>
+					<th>Obs</th>
+					<th>Maquina</th>
+					<th>Ações</th>
 
-                <?php foreach($this->data as $entity): ?>
+				</tr>
+
+
+
+                <?php foreach($this->data as $problemList): ?>
                     <tr>
-                        <td><?php echo $entity->getStatus(); ?></td>
-                        <td><?php echo $entity->getProblem(); ?></td>
-                        <td><?php echo $entity->getObs(); ?></td>
-                        <td><?php echo $entity->getObs(); ?></td>
-                        <td>
-                            <a href="<?php echo $this->url('pc_helpAdmin-interna',
-                                array('controller'=>'solucao','action'=>'new','id'=>$entity->getCodOs())); ?>">Solucionar</a>
-                            <a href="<?php echo $this->url('pc_helpAdmin-interna',
-                                array('controller'=>'problema','action'=>'edit','id'=>$entity->getCodOs())); ?>">Atualizar</a>
-                        </td>
+					<td><?php echo $problemList->getStatus(); ?></td>
+					<td><?php echo $problemList->getProblem(); ?></td>
+					<td><?php echo $problemList->getObs(); ?></td>
+					<td><?php echo $problemList->getObs(); ?></td>
+					<td>
+						<div class="btn-group">
 
-                    </tr>
+							<a
+								href="<?php
+																	
+echo $this->url ( 'pc_helpAdmin-interna', array (
+																			'controller' => 'solucao',
+																			'action' => 'new',
+																			'id' => $problemList->getCodOs () 
+																	) );
+																	?>"
+								class="btn btn-success" role="button"" >Solucionar</a> <a
+								href="<?php
+																	
+echo $this->url ( 'pc_helpAdmin-interna', array (
+																			'controller' => 'problema',
+																			'action' => 'edit',
+																			'id' => $problemList->getCodOs () 
+																	) );
+																	?>"
+								class="btn btn-success" role="button"">Atualizar</a>
+
+						</div>
+
+
+					</td>
+
+				</tr>
                 <?php endforeach; ?>
 
 
@@ -45,10 +65,13 @@
 
             </table>
 
-        </div> <!-- final table -->
+		</div>
+		<!-- final table -->
 
-    </div> <!-- final coll-lg-->
-</div> <!--final container-->
+	</div>
+	<!-- final coll-lg-->
+</div>
+<!--final container-->
 
 </hr>
 

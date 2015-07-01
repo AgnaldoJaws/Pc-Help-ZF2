@@ -11,7 +11,10 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",
       "doctrine/doctrine-orm-module": "dev-master",
-      "neilime/zf2-twb-bundle": "2.*@stable"
+      "neilime/zf2-twb-bundle": "2.*@stable",
+      "dino/dompdf-module": "*",
+        "zendframework/zendpdf": "^2.0@dev",
+      "anouar/fpdf": "*"
 
     },
 

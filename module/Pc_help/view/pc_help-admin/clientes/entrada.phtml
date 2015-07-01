@@ -1,0 +1,108 @@
+<html>
+
+<head>
+
+</head>
+<body>
+	<h2>
+		<center>REGIS BYTE</center>
+	</h2>
+	<P>
+	
+	
+	<center>Manutenção Em equipamentos de informática.</center>
+	</P>
+<?php echo date('d/m/Y', strtotime($data)); ?>
+
+<h3>
+		<center>Pedido de Ordem de Serviço.</center>
+	</h3>
+	<hr>
+
+	<h3>
+		<center>Cliente</center>
+	</h3>
+	<table>
+		<tr>
+			<th>Nome</th>
+
+		</tr>
+
+    <?php foreach($this->data as $entity): ?>
+        <tr>
+			<td><?php echo $entity->getNomecliente()?></td>
+
+
+		</tr>
+    <?php endforeach; ?>
+
+</table>
+
+	<hr>
+
+	<h3>
+		<center>Máquina</center>
+	</h3>
+	<table border>
+
+		<tr>
+			<td>Código:</td>
+		
+		
+		<tr>
+			<td>Tipo:</td>
+		</tr>
+
+    
+    
+    <?php foreach($entity->getMaquina() as $maquina): ?>
+
+                        <tr>
+			<td><?php echo $maquina->getCodMaq(); ?></td>
+			<td><?php echo $maquina->getTipo(); ?></td>
+
+
+		</tr>
+                    <?php endforeach; ?>
+
+
+</table>
+
+	<hr>
+	<h3>
+		<center>Problema Reclamado</center>
+	</h3>
+	<table border>
+
+		<tr>
+			<td>Descrição:</td>
+		
+		
+		<tr>
+			<td>Observação:</td>
+		</tr>
+		<tr>
+			<td>Data entrada:</td>
+		</tr>
+
+
+	</table>
+
+	<p>
+	
+	
+	<center>Atenção!</center>
+	</p>
+	<p>-> Lorem Ipsum é simplesmente uma simulação de texto</p>
+	<p>-> da indústria tipográfica e de impressos, e vem se</p>
+	<p>-> ndo utilizado desde o século XVI, quando um impre</p>
+	<p>->ssor desconhecido pegou uma bandeja de tipos e os</p>
+
+
+	<p>----------------------</p>
+	<p>Assinatura do Cliente</p>
+
+
+
+</body>
+</html>
